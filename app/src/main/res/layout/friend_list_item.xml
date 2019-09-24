@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:baselineAligned="false"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center">
+
+            <TextView
+                    android:text="이은경"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/tv_friend_name"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"/>
+
+<!--            <TextView
+                    android:text="내년 경조사비 내년 경조사비 내년 경조사비"
+                    android:textSize="15sp"
+                    android:id="@+id/tv_friend_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>-->
+
+    </LinearLayout>
+
+    <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:text="50000 원"
+                android:textAlignment="textEnd"
+                android:layout_gravity="end"
+                android:layout_toLeftOf="@+id/btn_money_detail"
+                android:layout_toStartOf="@id/btn_money_detail"
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textSize="20sp" />
+
+        <Button
+                android:id="@+id/btn_money_detail"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_detail" />
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>
