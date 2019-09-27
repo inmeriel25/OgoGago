@@ -1,7 +1,7 @@
 package com.eklee.ogogago.utils;
 
 import android.content.Context;
-import android.support.annotation.IdRes;
+import androidx.annotation.IdRes;
 import android.text.Editable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -17,7 +17,7 @@ import com.eklee.ogogago.R;
  */
 public class KeyboardView extends FrameLayout implements View.OnClickListener {
 
-    private EditText mPasswordField;
+    private EditText mPriceField;
 
     public KeyboardView(Context context) {
         super(context);
@@ -40,7 +40,10 @@ public class KeyboardView extends FrameLayout implements View.OnClickListener {
     }
 
     private void initViews() {
-        mPasswordField = $(R.id.password_field);
+        mPriceField = $(R.id.price_field);
+
+        mPriceField.addTextChangedListener(new NumberTextWatcher(mPriceField));
+
         $(R.id.t9_key_0).setOnClickListener(this);
         $(R.id.t9_key_1).setOnClickListener(this);
         $(R.id.t9_key_2).setOnClickListener(this);
@@ -59,17 +62,17 @@ public class KeyboardView extends FrameLayout implements View.OnClickListener {
     public void onClick(View v) {
         // handle number button click
         if (v.getTag() != null && "number_button".equals(v.getTag())) {
-            mPasswordField.append(((TextView) v).getText());
+            mPriceField.append(((TextView) v).getText());
             return;
         }
         switch (v.getId()) {
             case R.id.t9_key_clear: { // handle clear button
-                mPasswordField.setText(null);
+                mPriceField.setText(null);
             }
             break;
             case R.id.t9_key_backspace: { // handle backspace button
                 // delete one character
-                Editable editable = mPasswordField.getText();
+                Editable editable = mPriceField.getText();
                 int charCount = editable.length();
                 if (charCount > 0) {
                     editable.delete(charCount - 1, charCount);
@@ -80,10 +83,13 @@ public class KeyboardView extends FrameLayout implements View.OnClickListener {
     }
 
     public String getInputText() {
-        return mPasswordField.getText().toString();
+        return mPriceField.getText().toString();
     }
 
     protected <T extends View> T $(@IdRes int id) {
         return (T) super.findViewById(id);
     }
+
+
+
 }

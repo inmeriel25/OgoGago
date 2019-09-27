@@ -1,4 +1,4 @@
-package com.eklee.ogogago
+package com.eklee.ogogago.models
 
 /**
  * Created by eklee on 2019-09-23.

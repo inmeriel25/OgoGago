@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimary" >
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_cancel" />
+
+            <TextView
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="저장"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+            android:layout_below="@id/toolbar"
+            android:gravity="center"
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+        <TextView
+                android:text="2019.09.27"
+                android:id="@+id/tv_date"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        <Spinner
+                android:id="@+id/spinner_field1"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:spinnerMode="dropdown"
+                android:textColor="@color/black"
+                android:textAlignment="center"/>
+
+        <Spinner
+                android:id="@+id/spinner_field2"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:spinnerMode="dropdown"
+                android:textColor="@color/black"
+                android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_below="@+id/layout2"
+            android:id="@+id/layout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="false"
+            android:layout_marginTop="70dp"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+        <TextView
+                android:id="@+id/tv_giv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="나"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+        <Space
+                android:layout_width="20dp"
+                android:layout_height="50dp" />
+
+        <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_arrow" />
+
+        <Space
+                android:layout_width="20dp"
+                android:layout_height="50dp" />
+
+        <TextView
+                android:id="@+id/tv_rec_name"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="유정"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+    </LinearLayout>
+
+
+    <com.eklee.ogogago.utils.KeyboardView
+            android:id="@+id/keyboardView"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"/>
+
+</RelativeLayout>

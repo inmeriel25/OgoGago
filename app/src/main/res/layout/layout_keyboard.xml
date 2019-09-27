@@ -4,18 +4,25 @@
         android:orientation="vertical"
         android:padding="8dp">
 
-    <EditText
-            android:id="@+id/password_field"
-            android:layout_width="match_parent"
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:background="#eeeeee"
-            android:enabled="false"
-            android:minHeight="48dp"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
-            android:singleLine="true"
-            android:textAppearance="?android:attr/textAppearanceMedium"/>
+            android:layout_gravity="center"
+            android:layout_marginBottom="50dp">
+
+        <EditText
+                style="@style/price_field"
+                android:id="@+id/price_field"
+                android:text="@string/number_zero"/>
+
+        <TextView
+                style="@style/price_field"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/price_field"
+                android:text="@string/won"/>
+
+    </RelativeLayout>
 
     <TableLayout
             android:id="@+id/keyboard"
@@ -31,7 +38,7 @@
             <TextView
                     android:id="@+id/t9_key_1"
                     style="@style/keyboard_number_button"
-                    android:text="@string/number_one"/>
+                    android:text="@string/number_one" />
 
             <TextView
                     android:id="@+id/t9_key_2"
@@ -41,7 +48,7 @@
             <TextView
                     android:id="@+id/t9_key_3"
                     style="@style/keyboard_number_button"
-                    android:text="@string/number_three"/>
+                    android:text="@string/number_three" />
         </TableRow>
 
         <TableRow style="@style/keyboard_row">
@@ -99,5 +106,7 @@
                     android:text="@string/btn_backspace"
                     android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
+
     </TableLayout>
+
 </LinearLayout>

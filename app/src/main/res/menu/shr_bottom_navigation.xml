@@ -2,31 +2,31 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-            android:id="@+id/category_friend"
+            android:id="@+id/nav_friend"
             android:enabled="true"
             android:title="친구"
             android:icon="@drawable/ic_friend"
             app:showAsAction="ifRoom"/>
     <item
-            android:id="@+id/category_out"
+            android:id="@+id/nav_in"
             android:enabled="true"
             android:title="나간돈"
             android:icon="@drawable/ic_friend"
             app:showAsAction="ifRoom"/>
     <item
-            android:id="@+id/category_newAdd"
+            android:id="@+id/nav_new_add"
             android:enabled="true"
             android:title="신규"
             android:icon="@drawable/ic_new"
             app:showAsAction="ifRoom"/>
     <item
-            android:id="@+id/category_in"
+            android:id="@+id/nav_out"
             android:enabled="true"
             android:title="들어온돈"
             android:icon="@drawable/ic_friend"
             app:showAsAction="ifRoom"/>
     <item
-            android:id="@+id/category_more"
+            android:id="@+id/nav_more"
             android:enabled="true"
             android:title="더보기"
             android:icon="@drawable/ic_more"

@@ -3,6 +3,20 @@
 
 
 
+    <!--category-->
+    <string-array name="categoryList1">
+        <item>지출</item>
+        <item>수입</item>
+    </string-array>
+
+    <!--category-->
+    <string-array name="categoryList2">
+        <item>결혼식</item>
+        <item>돌잔치</item>
+        <item>장례식</item>
+        <item>기타</item>
+    </string-array>
+
     <!--numeric keyboard-->
     <string name="number_zero">0</string>
     <string name="number_one">1</string>
@@ -14,6 +28,8 @@
     <string name="number_seven">7</string>
     <string name="number_eight">8</string>
     <string name="number_nine">9</string>
-    <string name="btn_clear">Clear</string>
-    <string name="btn_backspace">Back</string>
+    <string name="btn_clear">취소</string>
+    <string name="btn_backspace">지움</string>
+    <string name="btn_save">저장</string>
+    <string name="won">원</string>
 </resources>
