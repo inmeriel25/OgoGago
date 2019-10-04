@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/nav_graph"
+        app:startDestination="@id/friendsFragment">
+
+    <fragment
+            android:id="@+id/friendsFragment"
+            android:name="com.eklee.ogogago.ui.fragments.FriendsFragment"
+            android:label="friends_fragment"
+            tools:layout="@layout/fragment_friends" >
+        <action
+                android:id="@+id/action_friendsFragment_to_newAddFragment"
+                app:destination="@id/newAddFragment" />
+        <action
+                android:id="@+id/action_friendsFragment_to_moreFragment"
+                app:destination="@id/moreFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/newAddFragment"
+            android:name="com.eklee.ogogago.ui.fragments.NewAddFragment"
+            android:label="NewAddFragment" />
+    <fragment
+            android:id="@+id/moreFragment"
+            android:name="com.eklee.ogogago.ui.fragments.MoreFragment"
+            android:label="MoreFragment" />
+</navigation>
